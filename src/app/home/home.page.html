@@ -9,12 +9,41 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Titulo Central</ion-title>
+      <ion-title size="large">Login</ion-title>
     </ion-toolbar>
   </ion-header>
 
   <div id="container">
-    <h1>Menu de ingreso</h1>
+    <ion-avatar id="avatar">
+      <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+    </ion-avatar><br>
+    <h1>Login de Usuario</h1>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Credenciales</ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+        <ion-list>
+          <ion-item>
+            <ion-input [(ngModel)]="user.usuario" label="Nombre de Usuario" labelPlacement="floating"
+              placeholder="Ingrese su Usuario"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input [(ngModel)]="user.password" label="Contraseña" type="password" labelPlacement="floating"
+              placeholder="Ingrese su contraseña">
+            </ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-toggle>Recuerdame</ion-toggle>
+          </ion-item><br>
+          <ion-button (click)="mostrarConsola()" shape="round" size="small">Conectar</ion-button>
+        </ion-list>
+      </ion-card-content>
+
+      <h1>{{mensaje}}</h1><br>
+    </ion-card>
 
   </div>
 </ion-content>

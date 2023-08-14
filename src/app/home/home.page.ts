@@ -8,13 +8,19 @@ import { Component } from '@angular/core';
 export class HomePage {
 
   constructor() { }
+
   user = {
-    username: "",
+    usuario: "",
     password: ""
   }
-  public mensaje = "Mensaje de prueba";
+  public mensaje = "";
 
   mostrarConsola() {
     console.log(this.user)
+    if (this.user.usuario != "" && this.user.password != "") {
+      this.mensaje = "Conexion Exitosa"
+    } else {
+      this.mensaje = "Error al ingresar"
+    }
   }
 }
