@@ -7,6 +7,14 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  constructor() { }
+  user = {
+    username: "",
+    password: ""
+  }
+  public mensaje = "Mensaje de prueba";
 
+  mostrarConsola() {
+    console.log(this.user)
+  }
 }
